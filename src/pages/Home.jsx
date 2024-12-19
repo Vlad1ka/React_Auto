@@ -23,7 +23,7 @@ import Pagination from '../components/Pagination';
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const search = searchValue ? `&search=${searchValue}` : "";
 
-    fetch(`https://671e6ae21dfc429919823ea6.mockapi.io/Auto?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${search}`)
+    fetch(`https://671e6ae21dfc429919823ea6.mockapi.io/Auto?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`)
 
       .then((res) => {
         return res.json();
@@ -37,7 +37,7 @@ import Pagination from '../components/Pagination';
 
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj}/>);
 
-  const skeletons = [... new Array(6)].map((_, index) => (<Skeleton key={index} />));
+  const skeletons = [... new Array(4)].map((_, index) => (<Skeleton key={index} />));
 
   return (
     <div className='container'>

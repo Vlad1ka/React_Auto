@@ -68,12 +68,11 @@
   }
 
   &__bottom {
-    width: 286px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
-    margin-right: 15px;
+    margin: 30px 6px 0 0;
   }
 
   &__price {
