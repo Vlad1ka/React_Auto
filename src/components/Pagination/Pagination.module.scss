@@ -6,17 +6,17 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        color: #fe5f1e;
+        color: #228BEF;
     
         width: 45px;
         height: 45px;
         border-radius: 30px;
-        border: 1px solid #fe5f1e;
+        border: 1px solid #228BEF;
         margin-right: 10px;
         cursor: pointer;
     
         &:hover {
-          background: #fe5f1e;
+          background: #228BEF;
           color: #fff;
         }
       }
@@ -25,7 +25,7 @@
     :global {
       .selected {
         a {
-          background-color: #fe5f1e;
+          background-color: #228BEF;
           color: #fff;
         }
       }

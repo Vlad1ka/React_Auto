@@ -2,7 +2,7 @@ import React from 'react'
 
 const Categories = ({value, onChangeCategory}) => {
 
-    const categories = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
+    const categories = ['Все', 'Lada', 'Mitsubishi', 'Ford', 'Nissan'];
 
     return (
         <div className='categories'>

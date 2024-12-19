@@ -1,9 +1,9 @@
 import React from 'react';
-function PizzaBlock({title, price, imageUrl, sizes, types }) {
+function PizzaBlock({ title, price, imageUrl, sizes, types }) {
   const [activeType, setActiveType] = React.useState(0);
-  const [activeSize, setActiveSize] = React.useState(0);
+//  const [activeSize, setActiveSize] = React.useState(0);
 
-  const typeNames = ["тонкое", "традиционное"];
+  const typeNames = ["седан", "универсал"];
 
   return (
     <div className="pizza-block">
@@ -21,7 +21,7 @@ function PizzaBlock({title, price, imageUrl, sizes, types }) {
             </li>
             )}
           </ul>
-          <ul>
+          {/* <ul>
               {sizes.map((sizes, i) =>(
                 <li
                   key={sizes}
@@ -31,10 +31,10 @@ function PizzaBlock({title, price, imageUrl, sizes, types }) {
                   {sizes} см.
                 </li>
               ))}
-          </ul>
+          </ul> */}
         </div>
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">от {price} ₽</div>
+          <div className="pizza-block__price">от {price} млн ₽</div>
           <div className="button button--outline button--add">
             
             <span>Добавить</span>

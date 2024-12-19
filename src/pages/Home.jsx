@@ -23,7 +23,7 @@ import Pagination from '../components/Pagination';
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const search = searchValue ? `&search=${searchValue}` : "";
 
-    fetch(`https://66f121e741537919154fa987.mockapi.io/Items?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${search}`)
+    fetch(`https://671e6ae21dfc429919823ea6.mockapi.io/Auto?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${search}`)
 
       .then((res) => {
         return res.json();
