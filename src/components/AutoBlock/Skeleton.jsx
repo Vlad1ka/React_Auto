@@ -2,7 +2,7 @@ import React from "react"
 import ContentLoader from "react-content-loader";
 
 const Skeleton = (props) => (
-  <ContentLoader className="pizza-block"
+  <ContentLoader className="auto-block"
     speed={2}
     width={400}
     height={500}

@@ -1,6 +1,6 @@
 import React from 'react';
-import PizzaBlock from '../components/PizzaBlock';
-import Skeleton from '../components/PizzaBlock/Skeleton';
+import AutoBlock from '../components/AutoBlock';
+import Skeleton from '../components/AutoBlock/Skeleton';
 import Categories from '../components/Categories';
 import Sort from '../components/Sort';
 import Pagination from '../components/Pagination';
@@ -35,7 +35,7 @@ import Pagination from '../components/Pagination';
     window.scrollTo(0, 0);
   },[categoryId, sortType, searchValue, currentPage]);
 
-  const pizzas = Array.isArray(items) ? items.map((obj) => <PizzaBlock key={obj.id} {...obj}/>) : []
+  const auto = Array.isArray(items) ? items.map((obj) => <AutoBlock key={obj.id} {...obj}/>) : []
 
   const skeletons = [... new Array(4)].map((_, index) => (<Skeleton key={index} />));
 
@@ -49,7 +49,7 @@ import Pagination from '../components/Pagination';
         <Sort value={sortType} onChangeSort={(index) => setSortType (index)} />
       </div>
         <h2 className="content__title">Все автомобили</h2>
-        <div className="content__items">{isLoading ? skeletons : pizzas}</div>
+        <div className="content__items">{isLoading ? skeletons : auto}</div>
         <Pagination onChangePage={(number) => setCurrentPage(number)}/>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-function PizzaBlock({ title, price, imageUrl, types }) {
+function AutoBlock({ title, price, imageUrl, types }) {
   const [activeType, setActiveType] = React.useState(0);
   const [counter, setCounter] = useState(0);
 
@@ -10,10 +10,10 @@ function PizzaBlock({ title, price, imageUrl, types }) {
   }
 
   return (
-    <div className="pizza-block">
-        <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
-        <h4 className="pizza-block__title">{title}</h4>
-        <div className="pizza-block__selector">
+    <div className="auto-block">
+        <img className="auto-block__image" src={imageUrl} alt="Auto" />
+        <h4 className="auto-block__title">{title}</h4>
+        <div className="auto-block__selector">
           <ul>
             {types.map((typeId) =>
             <li 
@@ -26,8 +26,8 @@ function PizzaBlock({ title, price, imageUrl, types }) {
             )}
           </ul>
         </div>
-        <div className="pizza-block__bottom">
-          <div className="pizza-block__price">от {price} млн ₽</div>
+        <div className="auto-block__bottom">
+          <div className="auto-block__price">от {price} млн ₽</div>
           <div className="button button--outline button--add" onClick={() => handleAddClick()}>
             <span>Добавить</span>
 
@@ -38,6 +38,6 @@ function PizzaBlock({ title, price, imageUrl, types }) {
   )
 }
 
-export default PizzaBlock;
+export default AutoBlock;
 
 
