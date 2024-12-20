@@ -1,9 +1,13 @@
-import React from 'react';
-function PizzaBlock({ title, price, imageUrl, sizes, types }) {
+import React, { useState } from 'react';
+function PizzaBlock({ title, price, imageUrl, types }) {
   const [activeType, setActiveType] = React.useState(0);
-//  const [activeSize, setActiveSize] = React.useState(0);
+  const [counter, setCounter] = useState(0);
 
   const typeNames = ["седан", "универсал"];
+
+  const handleAddClick = () => {
+    setCounter(prevState =>  prevState + 1 )
+  }
 
   return (
     <div className="pizza-block">
@@ -21,24 +25,13 @@ function PizzaBlock({ title, price, imageUrl, sizes, types }) {
             </li>
             )}
           </ul>
-          {/* <ul>
-              {sizes.map((sizes, i) =>(
-                <li
-                  key={sizes}
-                  onClick={() => setActiveSize(i)}
-                  className={activeSize === i ? "active" : ""}
-                >
-                  {sizes} см.
-                </li>
-              ))}
-          </ul> */}
         </div>
         <div className="pizza-block__bottom">
           <div className="pizza-block__price">от {price} млн ₽</div>
-          <div className="button button--outline button--add">
-            
+          <div className="button button--outline button--add" onClick={() => handleAddClick()}>
             <span>Добавить</span>
-            <i>0</i>
+
+            {counter > 0 &&  <i>{counter}</i> }
           </div>
         </div>
     </div>

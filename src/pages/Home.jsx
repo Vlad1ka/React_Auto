@@ -35,7 +35,7 @@ import Pagination from '../components/Pagination';
     window.scrollTo(0, 0);
   },[categoryId, sortType, searchValue, currentPage]);
 
-  const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj}/>);
+  const pizzas = Array.isArray(items) ? items.map((obj) => <PizzaBlock key={obj.id} {...obj}/>) : []
 
   const skeletons = [... new Array(4)].map((_, index) => (<Skeleton key={index} />));
 
